@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Titulo -->
+    <title>3ra Entrega - Miranda</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="socials__header">
+            <div class="socials__header">
+                <ion-icon role="img" name="logo-facebook"></ion-icon>
+                <ion-icon role="img" name="logo-instagram"></ion-icon>
+                <ion-icon role="img" name="logo-youtube"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__left">
+                <div class="logo">
+                    <h2>Course</h2>
+                </div>
+            </div>
+            <!-- Left nav -->
+            <div class="nav__mid">
+                <form>
+                    <ion-icon role="img" name="search"></ion-icon>
+                    <input type="text" placeholder="Busca aquí...">
+                </form>
+            </div>
+            <!-- mid nav -->
+            <div class="nav__right">
+                <div class="cart-icon-container">
+                    <ion-icon role="img" name="cart" class="nav-icons" id="cart-icon" data-cart-buttons></ion-icon>
+                    <span class="cart__items-counter" id="cart-counter">0</span>
+                </div>
+                <div class=" container__cart-products" id="cart">
+                    <ion-icon role="img" name="close" class="close__cart" data-cart-buttons></ion-icon>
+                    <div id="cart-list" class="cart-list">
+                        <div class="cart-list__header">
+                            <h4>imagen</h4>
+                            <h4>Nombre</h4>
+                            <h4>Precio</h4>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="cart-list__items" id="cart-list__items"></div>
+                    </div>
+                    <a href="#" class="button" id="empty-cart">Vaciar carrito</a>
+                </div>
+
+                <div class="account-container">
+                    <ion-icon role="img" name="person-circle" class="nav-icons"></ion-icon>
+                </div>
+            </div>
+            <!-- right nav -->
+        </div>
+    </nav>
+    <!--  -->
+    <section class="section hero">
+        <div class="hero__image" aria-label="Hero image">
+            <p class="clipped">Hero imagen</p>
+            <div class="image__sticky">
+                <h3>Aprende a resaltar esos detalles que vemos, con una cámara</h3>
+                <p>A nosotros los curiosos, nos gusta estar siempre atentos a pequeños detalles, buscándole la vuelta a
+                    todo
+                    y siempre pendiente de aquellos que los demás no pueden ver.
+                    <span>
+                        <br>
+                        ¿Por qué no agarrar una cámara y mostrarle al mundo nuestro punto de vista?
+                    </span>
+                </p>
+                <div class="hero__buttons">
+                    <a class="button__hero button__hero--filled">Empieza el curso ahora</a>
+                    <a class="button__hero ">Ve mas cursos aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero__info">
+            <div class="hero__gradient">
+                <ul class="gradient__info">
+                    <li class="info__item">
+                        <ion-icon role="img" name="flask-outline"></ion-icon>
+                        <p>¡Cientos de cursos hechos a medida, solo para ti!</p>
+                    </li>
+                    <li class="info__item">
+                        <ion-icon role="img" name="reload"></ion-icon>
+                        <p>¡Cursos disponbiles para toda la vida, asi nunca dejaras de aprender!</p>
+                    </li>
+                    <li class="info__item">
+                        <ion-icon role="img" name="shield-checkmark"></ion-icon>
+                        <p>¡Pagos seguros y con soporte las 24 horas!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="main__container" id="course-list">
+            <div class="courses__container">
+                <div class="course__header-container">
+                    <h3>
+                        Cursos de fotografía
+                        <ion-icon role="img" name="camera-outline"></ion-icon>
+                    </h3>
+                </div>
+                <div href="#" class="courses__card-container" id="course-photo"></div>
+            </div>
+
+            <div class="courses__container">
+                <div class="course__header-container">
+                    <h3>
+                        Cursos de cocina
+                        <ion-icon role="img" name="restaurant-outline"></ion-icon>
+                    </h3>
+                </div>
+                <div href="#" class="courses__card-container" id="course-cooking"></div>
+            </div>
+            <div class="courses__container">
+                <div class="course__header-container">
+                    <h3>
+                        Cursos de programacion
+                        <ion-icon role="img" name="code-slash-outline"></ion-icon>
+                    </h3>
+                </div>
+                <div href="#" class="courses__card-container" id="course-code"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="ft-socials">
+                <ion-icon role="img" name="logo-facebook"></ion-icon>
+                <ion-icon role="img" name="logo-instagram"></ion-icon>
+                <ion-icon role="img" name="logo-youtube"></ion-icon>
+            </div>
+            <div class="ft-about">
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li> <a href="#">Contactanos</a></li>
+                    <li> <a href="#">Politicas</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p> © Todos los derechos reservados</p>
+                <p>Jabox</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
