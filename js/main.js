@@ -3,7 +3,6 @@ import { cursos } from './db.js';
 
 // Convertir JSON a objeto
 const listaCursosJSON = JSON.parse(cursos);
-console.log(listaCursosJSON);
 
 // Identificar con que categoria de curso se trabaja
 function filtrarCategoria() {
@@ -251,9 +250,26 @@ function funcionalidadCarrito() {
     }
 }
 
+//Modal account
+function funcionalidadAcc() {
+    const icono = document.getElementById('acc-icon');
+
+    icono.addEventListener('mouseover', modal);
+
+    function modal(e) {
+        const drop = e.target.parentElement.querySelector('.dropdown-menu');
+        drop.classList.toggle('dropdown-menu--active');
+
+
+        drop.addEventListener('mouseleave', modal);
+    }
+
+}
+
 // Iniciar script
 iniciar();
 function iniciar() {
     filtrarCategoria();
     funcionalidadCarrito();
+    funcionalidadAcc();
 }

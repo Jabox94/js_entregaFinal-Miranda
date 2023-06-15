@@ -34,15 +34,19 @@
                     <h2>Course</h2>
                 </div>
             </div>
-            <!-- Left nav -->
+            <!-- Left nav / logo -->
             <div class="nav__mid">
                 <form>
                     <ion-icon role="img" name="search"></ion-icon>
                     <input type="text" placeholder="Busca aquí...">
                 </form>
             </div>
-            <!-- mid nav -->
+            <!-- mid nav / search box -->
             <div class="nav__right">
+                <div class="navbar-mobile">
+                    <ion-icon name="close" class="close-nav"></ion-icon>
+                    <ion-icon name="reorder-three" class="open-nav"></ion-icon>
+                </div>
                 <div class="cart-icon-container">
                     <ion-icon role="img" name="cart" class="nav-icons" id="cart-icon" data-cart-buttons></ion-icon>
                     <span class="cart__items-counter" id="cart-counter">0</span>
@@ -60,18 +64,34 @@
                     </div>
                     <a href="#" class="button" id="empty-cart">Vaciar carrito</a>
                 </div>
-
-                <div class="account-container">
-                    <ion-icon role="img" name="person-circle" class="nav-icons"></ion-icon>
+                <div class="account-container acc__dropdown">
+                    <ion-icon role="img" name="person-circle" class="nav-icons" id="acc-icon"></ion-icon>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Iniciar sesion</a></li>
+                        <li><a href="#">Crear cuenta</a></li>
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- right nav -->
+            <!-- right nav / nav icons-->
         </div>
     </nav>
-    <!--  -->
+    <!-- Navbar -->
+
+    <aside class="aside-navbar">
+        <div class="aside-mobile">
+            <ion-icon role="img" name="person-circle" class="nav-icons"></ion-icon>
+            <ul class="aside__links">
+                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Crear cuenta</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </div>
+    </aside>
+
     <section class="section hero">
         <div class="hero__image" aria-label="Hero image">
-            <p class="clipped">Hero imagen</p>
+            <p class="hidden">Hero imagen</p>
             <div class="image__sticky">
                 <h3>Aprende a resaltar esos detalles que vemos, con una cámara</h3>
                 <p>A nosotros los curiosos, nos gusta estar siempre atentos a pequeños detalles, buscándole la vuelta a
