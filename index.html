@@ -31,7 +31,7 @@
         <div class="nav__container">
             <div class="nav__left">
                 <div class="logo">
-                    <h2>Course</h2>
+                    <img src="media/brand-logo.png" alt="Brand logo" class="logo__img">
                 </div>
             </div>
             <!-- Left nav / logo -->
@@ -44,8 +44,8 @@
             <!-- mid nav / search box -->
             <div class="nav__right">
                 <div class="navbar-mobile">
-                    <ion-icon name="close" class="close-nav"></ion-icon>
-                    <ion-icon name="reorder-three" class="open-nav"></ion-icon>
+                    <ion-icon name="close" class="close-nav" id="close-nav"></ion-icon>
+                    <ion-icon name="reorder-three" class="open-nav" id="open-nav"></ion-icon>
                 </div>
                 <div class="cart-icon-container">
                     <ion-icon role="img" name="cart" class="nav-icons" id="cart-icon" data-cart-buttons></ion-icon>
@@ -62,10 +62,13 @@
                         </div>
                         <div class="cart-list__items" id="cart-list__items"></div>
                     </div>
-                    <a href="#" class="button" id="empty-cart">Vaciar carrito</a>
+                    <div class="link-buttons">
+                        <a href="#" class="button" id="empty-cart">Vaciar carrito</a>
+                        <a href="#" class="button">Finalizar compra</a>
+                    </div>
                 </div>
                 <div class="account-container acc__dropdown">
-                    <ion-icon role="img" name="person-circle" class="nav-icons" id="acc-icon"></ion-icon>
+                    <ion-icon role="img" name="person-sharp" class="nav-icons nav-person" id="acc-icon"></ion-icon>
                     <ul class="dropdown-menu">
                         <li><a href="#">Iniciar sesion</a></li>
                         <li><a href="#">Crear cuenta</a></li>
@@ -80,7 +83,7 @@
 
     <aside class="aside-navbar">
         <div class="aside-mobile">
-            <ion-icon role="img" name="person-circle" class="nav-icons"></ion-icon>
+            <ion-icon role="img" name="person-sharp" class="nav-icons nav-person" id="acc-icon"></ion-icon>
             <ul class="aside__links">
                 <li><a href="#">Iniciar sesion</a></li>
                 <li><a href="#">Crear cuenta</a></li>
@@ -127,6 +130,8 @@
             </div>
         </div>
     </section>
+
+    <section class="user-rating" id="user-rating"></section>
 
     <main class="main">
         <div class="main__container" id="course-list">

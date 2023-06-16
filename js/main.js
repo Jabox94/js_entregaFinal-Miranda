@@ -253,10 +253,36 @@ function funcionalidadCarrito() {
 //Modal account
 function funcionalidadAcc() {
     const icono = document.getElementById('acc-icon');
+    const openNav = document.getElementById('open-nav');
+    const closeNav = document.getElementById('close-nav');
+    const asideNav = document.querySelector('.aside-navbar');
 
     icono.addEventListener('mouseover', modal);
+    openNav.addEventListener('click', mobile);
+    closeNav.addEventListener('click', mobile);
+
+
+    function mobile(e) {
+        e.preventDefault();
+
+        // Cambio de estado (icono)
+        if (e.target.id === 'open-nav') {
+            openNav.style.display = 'none';
+            closeNav.style.display = 'flex';
+            asideNav.classList.toggle('aside-navbar');
+            asideNav.classList.toggle('aside-navbar--active');
+
+        } else {
+            closeNav.style.display = 'none';
+            openNav.style.display = 'flex';
+            asideNav.classList.toggle('aside-navbar');
+            asideNav.classList.toggle('aside-navbar--active');
+        }
+    }
 
     function modal(e) {
+        e.preventDefault();
+
         const drop = e.target.parentElement.querySelector('.dropdown-menu');
         drop.classList.toggle('dropdown-menu--active');
 
