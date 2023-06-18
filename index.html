@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,26 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Spinner -->
+    <link rel="stylesheet" href="./css/spinner.css">
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Descripcion -->
+    <meta name="description"
+        content="Inicia tu aprendizaje con Course, una herramienta hecha a medida para que nunca pares de aprender.">
+    <meta name="keywords"
+        content="Courses, Course, Cursos, Curso de cocina, Curso de Programacion, Curso de Programacion, Curso Fundamental, Curso Intermedio, Curso Avanzado">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./media/favicon.ico" type="image/x-icon">
     <!-- Titulo -->
-    <title>3ra Entrega - Miranda</title>
+    <title>Course - Para que nunca pares de aprender</title>
 </head>
 
 <body>
     <header class="header">
         <div class="socials__header">
-            <div class="socials__header">
-                <ion-icon role="img" name="logo-facebook"></ion-icon>
-                <ion-icon role="img" name="logo-instagram"></ion-icon>
-                <ion-icon role="img" name="logo-youtube"></ion-icon>
-            </div>
+            <ion-icon role="img" name="logo-facebook"></ion-icon>
+            <ion-icon role="img" name="logo-instagram"></ion-icon>
+            <ion-icon role="img" name="logo-youtube"></ion-icon>
         </div>
     </header>
-    <!--  -->
+
     <nav class="nav">
         <div class="nav__container">
             <div class="nav__left">
@@ -68,10 +76,11 @@
                     </div>
                 </div>
                 <div class="account-container acc__dropdown">
-                    <ion-icon role="img" name="person-sharp" class="nav-icons nav-person" id="acc-icon"></ion-icon>
+                    <ion-icon role="img" name="person-circle" class="nav-icons nav-person" id="acc-icon"></ion-icon>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Iniciar sesion</a></li>
-                        <li><a href="#">Crear cuenta</a></li>
+                        <li><a href="#" id="username-holder">¡Bienvenido usuario!</a></li>
+                        <li><a href="#" id="loginBtn">Iniciar sesion</a></li>
+                        <li><a href="#" id="createBtn">Crear cuenta</a></li>
                         <li><a href="#">Contactos</a></li>
                     </ul>
                 </div>
@@ -79,14 +88,13 @@
             <!-- right nav / nav icons-->
         </div>
     </nav>
-    <!-- Navbar -->
 
     <aside class="aside-navbar">
         <div class="aside-mobile">
-            <ion-icon role="img" name="person-sharp" class="nav-icons nav-person" id="acc-icon"></ion-icon>
             <ul class="aside__links">
-                <li><a href="#">Iniciar sesion</a></li>
-                <li><a href="#">Crear cuenta</a></li>
+                <li><a href="#" id="username-holder">¡Bienvenido!</a></li>
+                <li><a href="#" id="loginBtn-mobile">Iniciar sesion</a></li>
+                <li><a href="#" id="createBtn-mobile">Crear cuenta</a></li>
                 <li><a href="#">Contactos</a></li>
             </ul>
         </div>
@@ -130,8 +138,6 @@
             </div>
         </div>
     </section>
-
-    <section class="user-rating" id="user-rating"></section>
 
     <main class="main">
         <div class="main__container" id="course-list">
@@ -189,6 +195,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/main.js" type="module"></script>
 </body>
 
