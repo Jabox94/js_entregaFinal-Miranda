@@ -5,6 +5,7 @@ export function validarSesion() {
     const submit = document.getElementById('formVerify');
     const form = document.querySelector('.loginForm');
 
+
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [{ username: 'admin', email: 'admin@admin.me', password: '1234' }];
     /**************************** DOM SCRIPT ****************************/
     // Spinner
@@ -19,30 +20,45 @@ export function validarSesion() {
     cargarEventos()
     function cargarEventos() {
         submit.addEventListener('click', validar);
+        password.addEventListener('input', comprobarCampos);
+        username.addEventListener('input', comprobarCampos);
     }
+
 
     function validar(e) {
         e.preventDefault();
+
         let inputUsername = username.value;
         let inputPassword = password.value;
         // Tomamos los valores de los inputs,
         // Con base en eso, busacamos mediante el input el username que coincida con dicho valor
         const cuentaRescatada = usuarios.find(usuario => usuario.username === inputUsername);
-        //Filtramos su contraseña, extraida del objeto usuario
-        const passwordUsuario = cuentaRescatada.password;
-
-
-        //Realizamos al comparacion
-        if (passwordUsuario === inputPassword) {
-            form.appendChild(spinnerContainer);
-            setTimeout(() => {
-                spinnerContainer.remove();
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Genial!',
-                    text: 'Se ha realizado el login correctamente'
-                });
-            }, 2000);
+        if (cuentaRescatada) {
+            //Filtramos su contraseña, extraida del objeto usuario
+            const passwordUsuario = cuentaRescatada.password;
+            //Realizamos al comparacion
+            if (passwordUsuario === inputPassword) {
+                form.appendChild(spinnerContainer);
+                setTimeout(() => {
+                    spinnerContainer.remove();
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Genial!',
+                        text: 'Se ha realizado el login correctamente'
+                    });
+                }, 2000);
+                return;
+            } else {
+                form.appendChild(spinnerContainer);
+                setTimeout(() => {
+                    spinnerContainer.remove();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Login incorrecto',
+                        text: 'Pruebe de nuevo'
+                    });
+                }, 2000);
+            }
             return;
         } else {
             form.appendChild(spinnerContainer);
@@ -50,17 +66,44 @@ export function validarSesion() {
                 spinnerContainer.remove();
                 Swal.fire({
                     icon: 'error',
-                    title: 'Login incorrecto',
-                    text: 'Pruebe de nuevo'
+                    title: '¡Error!',
+                    text: 'No se ha podido encontrar al usuario, intente de nuevo'
                 });
             }, 2000);
             return;
         }
+        //Fin del programa
     }
-    //Fin del programa
+
+    function comprobarCampos(e) {
+        e.preventDefault();
+
+        if (e.target.value === "") {
+            const referencia = e.target.parentElement;
+            const contenedor = document.createElement('P');
+            contenedor.classList.add('error-mandatory');
+            contenedor.textContent = 'Evite los espacios en blanco';
+
+            limpiarHTML(referencia);
+
+            referencia.appendChild(contenedor);
+
+            setTimeout(() => {
+                contenedor.remove();
+            }, 3000);
+        } else return;
+
+    }
+
+    function limpiarHTML(referencia) {
+        const elemento = referencia.querySelector('.error-mandatory');
+
+        if (elemento) {
+            elemento.remove();
+        }
+    }
+
 }
-
-
 
 export function validarCreate() {
     // Inputs
