@@ -1,6 +1,3 @@
-//SweetAlert2
-import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
-
 export function validarSesion() {
     //Inputs
     const username = document.getElementById('username-input');
@@ -34,6 +31,7 @@ export function validarSesion() {
         //Filtramos su contraseña, extraida del objeto usuario
         const passwordUsuario = cuentaRescatada.password;
 
+
         //Realizamos al comparacion
         if (passwordUsuario === inputPassword) {
             form.appendChild(spinnerContainer);
@@ -61,6 +59,8 @@ export function validarSesion() {
     }
     //Fin del programa
 }
+
+
 
 export function validarCreate() {
     // Inputs
