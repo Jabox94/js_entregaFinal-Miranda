@@ -13,16 +13,14 @@ const loginBtn = document.getElementById('loginBtn');
 const createBtn = document.getElementById('createBtn');
 
 export function modals() {
-
     icono.addEventListener('mouseover', modal);
     openNav.addEventListener('click', mobile);
     closeNav.addEventListener('click', mobile);
     loginBtn.addEventListener('click', login);
     createBtn.addEventListener('click', create);
     loginMobile.addEventListener('click', login)
-    // createMobile.addEventListener('click', create)
-
-    document.addEventListener('DOMContentLoaded', create);
+    createMobile.addEventListener('click', create)
+    document.addEventListener('DOMContentLoaded', login);
 }
 
 function mobile(e) {
@@ -83,7 +81,7 @@ function login(e) {
         <input type="password" name="password" id="password-input">
         </label>
         <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
-        <button type="Submit" id="formVerify" class="modalBtn opacity-50" disabled>Verificar</button>
+        <button type="Submit" id="formVerify" class="modalBtn">Verificar</button>
     `
     overlayH.appendChild(form);
 
@@ -141,7 +139,7 @@ function create(e) {
     if (contenedor) {
         validarCreate();
         contenedor.addEventListener('click', () => {
-            // overlayH.remove();
+            overlayH.remove();
         });
     }
 }
