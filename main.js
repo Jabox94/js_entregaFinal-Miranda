@@ -1,4 +1,4 @@
-import { filtrarCategoria } from './js/generarHTML.js';
+import { cargarDatos } from './js/generarHTML.js';
 
 // Modal para inicio de sesion y crear cuenta
 import { modals } from './js/modals.js'
@@ -9,7 +9,7 @@ import { carrito } from './js/carrito.js';
 /*********************** Inicio de programa ***********************/
 iniciar();
 function iniciar() {
-    filtrarCategoria();
-    carrito();
+    cargarDatos();
     modals();
+    carrito();
 }

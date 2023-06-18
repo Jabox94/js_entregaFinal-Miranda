@@ -1,16 +1,16 @@
-// Simula una base de datos con un JSON
-import { cursos } from './db.js'
-
-// Convertir JSON a objeto
-const listaCursosJSON = JSON.parse(cursos);
+export function cargarDatos() {
+    fetch('db.json')
+        .then(respuesta => respuesta.json()).catch(error => console.error('error', error))
+        .then(respuesta => filtrarCategoria(respuesta)).catch(error => console.error('error', error));
+}
 
 /*
 Filtra cursos por categoria, en base en eso, 
 genera el HTML dinamicamente en su celda correspondiente.
 */
 
-export function filtrarCategoria() {
-    listaCursosJSON.forEach(curso => {
+function filtrarCategoria(cursos) {
+    cursos.forEach(curso => {
         if (curso.categoria === 'fotografia') {
             // console.table(curso);
             generarHTML(curso);
@@ -26,7 +26,7 @@ export function filtrarCategoria() {
     });
 }
 
-export function generarHTML(entrada) {
+function generarHTML(entrada) {
 
     // Definiciones
     const contenedorFoto = document.querySelector('#course-photo');

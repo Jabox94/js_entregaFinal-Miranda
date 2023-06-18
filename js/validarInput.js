@@ -254,12 +254,13 @@ export function validarCreate() {
 
         // Sincronizar con localStorage
         let usuariosRegistrados = JSON.stringify(usuarios);
+        localStorage.clear();
         localStorage.setItem("usuarios", usuariosRegistrados);
 
         form.reset();
-        // setTimeout(() => {
-        //     window.location.reload();
-        // }, 2000);
+        setTimeout(() => {
+            window.location.reload();
+        }, 2000);
     }
 
 }

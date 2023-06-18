@@ -20,7 +20,6 @@ export function modals() {
     createBtn.addEventListener('click', create);
     loginMobile.addEventListener('click', login)
     createMobile.addEventListener('click', create)
-    document.addEventListener('DOMContentLoaded', login);
 }
 
 function mobile(e) {
