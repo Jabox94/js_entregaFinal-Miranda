@@ -16,3 +16,9 @@
   <li>Simulador de login</li>  
   <li>Modals</li>
 </ul>
+
+<h4>Planes a futuro:</h4>
+<ul>
+  <li>Introduccion de clases y metodos</li>
+  <li>Optimizar legibilidad del codigo</li>
+</ul>
